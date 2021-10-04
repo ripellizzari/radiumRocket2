@@ -1,0 +1,38 @@
+.boxes {
+  min-height: 80px;
+  width: 100%;
+  background-color: #cff4d2;
+}
+
+.boxes h3 {
+  padding: 15px;
+  color: #1ca7ec;
+  font-size: 25px;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+}
+
+.boxesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.box {
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 15px;
+}
+
+.box img {
+  height: 50px;
+  width: auto;
+  padding-top: 10px;
+}
+
+.box h4 {
+  color: #1ca7ec;
+  font-size: 25px;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+}
