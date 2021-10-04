@@ -25,7 +25,8 @@
 }
 
 .mostSeenBox img {
-  height: 50px;
-  width: auto;
+  width: 15%;
+  height: auto;
   margin: 10px;
+  object-fit: cover;
 }
