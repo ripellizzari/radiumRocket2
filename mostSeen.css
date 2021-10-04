@@ -1,0 +1,31 @@
+#mostSeen {
+  min-height: 70px;
+  width: 100%;
+  background-color: #205072;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: white;
+  display: flex;
+  flex-flow: column;
+}
+
+#mostSeen h3 {
+  margin: 10px;
+}
+
+.mostSeenBox {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.mostSeenBox a {
+  text-decoration: none;
+  margin: 10px;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: white;
+}
+
+.mostSeenBox img {
+  height: 50px;
+  width: auto;
+  margin: 10px;
+}
