@@ -1,0 +1,22 @@
+#newsletter {
+  min-height: 70px;
+  background-color: #79e495;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
+#newsletter h3 {
+  padding: 15px;
+  color: white;
+  font-size: 30px;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+}
+
+#newsletter form input,
+button {
+  width: 40%;
+  margin-left: 5%;
+}
