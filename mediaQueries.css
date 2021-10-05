@@ -1,0 +1,40 @@
+@media screen and (min-width: 425px) {
+  nav ul {
+    display: flex;
+    min-height: 30px;
+    width: 100%;
+    background-color: #79e495;
+    justify-content: space-around;
+    padding-top: 10px;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .newsBody h2 {
+    font-size: 30px;
+  }
+
+  .newsBody h3 {
+    display: block;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
