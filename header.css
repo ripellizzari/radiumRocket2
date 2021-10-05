@@ -10,6 +10,19 @@ header #journalName {
   align-items: center;
 }
 
+.date,
+p {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  background-color: #4ab3fa;
+  font-family: "Open Sans Condensed", sans-serif;
+  height: 20px;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
 nav {
   display: flex;
   align-items: flex-start;
