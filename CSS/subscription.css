@@ -1,0 +1,40 @@
+.input {
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 10px;
+}
+
+#inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #4ab3fa;
+  color: white;
+  font-size: 20px;
+  margin: 15px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 10px;
+  font-size: 20px;
+}

@@ -7,6 +7,11 @@
   padding-bottom: 15px;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+}
+
 #newsletter h3 {
   padding: 15px;
   color: white;
