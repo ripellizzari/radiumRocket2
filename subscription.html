@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 
 
     <title>subscription</title>
@@ -50,88 +51,92 @@
 
 
 
-<section id="subscription-container">
+<section id="formulario-container">
     
     <div class="title">
         <h2>HOLA</h2>
     </div>
 
   
-    <form id="inputs-container">
+    <form id="formulario">
     
+
+      <section class="inputs">
         <section class="col">
     
-            <div class="input">
-                <label for="fname">Nombre completo</label><br>
-                <input type="text" id="fname" name="fname"><br>
+            <div class="input" id="input-nombre">
+                <label for="nombre">Nombre completo</label><br>
+                <input type="text" id="fname" name="nombre"><br>
+                <div id="mfname" style="display: none;">Campo incorrecto</div>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-password">
                 <label for="password">Contraseña</label><br>
-                <input type="text" id="password" name="password"><br>
+                <input type="password" id="password" name="password"><br>
+                <div id="mpassword" style="display: none;">Campo incorrecto</div>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-rpassword">
                 <label for="rpassword">Repetir Contraseña</label><br>
                 <input type="text" id="rpassword" name="rpassword"><br>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-email">
                 <label for="email">Email</label><br>
                 <input type="text" id="email" name="email"><br>
+                <div id="memail" style="display: none;">Campo incorrecto</div>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-edad">
                 <label for="edad">Edad</label><br>
-                <input type="number" id="edad" name="edad"><br>
+                <input type="text" id="edad" name="edad"><br>
+                <div id="medad" style="display: none;">Campo incorrecto</div>
             </div>
   
         </section>
-
-  
   
         <section class="col">
 
-            <div class="input">
+            <div class="input" id="input-telefono">
                 <label for="telefono">Teléfono</label><br>
                 <input type="tel" id="telefono" name="telefono"><br>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-direccion">
                 <label for="direccion">Dirección</label><br>
                 <input type="text" id="direccion" name="direccion"><br>
             </div>
     
-            <div class="input">
+            <div class="input" id="input-ciudad">
                 <label for="ciudad">Ciudad</label><br>
                 <input type="text" id="ciudad" name="ciudad"><br>
             </div>
 
-            <div class="input">
+            <div class="input" id="input-cp">
                 <label for="cp">Codigo Postal</label><br>
                 <input type="number" id="cp" name="cp"><br>
             </div>
     
-            <div class="input">
+            <div class="input" id="input-dni">
                 <label for="dni">DNI</label><br>
                 <input type="number" id="dni" name="dni"><br>
             </div>
   
         </section>
 
+      </section>
+      
+      
+      <div class="btn-container" id="button">
+        <button type="submit" class="btn">Enviar</button>
+      </div>
+    
+
     </form>
 
-
-    <div class="btn-container">
-        <button onclick="return enviarFormulario()" class="btn">Enviar</button>
-    </div>
+   
 
 </section>
-
-
-
-
-
 
 
 
@@ -147,4 +152,11 @@
 
   <script src="./app.js"></script>
   </body>
+
+  <script>
+
+    function vali()
+
+  </script>
+
 </html>

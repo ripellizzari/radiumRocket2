@@ -13,15 +13,14 @@ h2 {
   padding: 10px;
 }
 
-#inputs-container {
+.inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: center;
+.formulario__input-error {
+  font-size: small;
 }
 
 .btn {
@@ -31,6 +30,7 @@ h2 {
   margin: 15px;
   height: 40px;
   border-radius: 10px;
+  width: auto;
 }
 
 label {
