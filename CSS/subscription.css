@@ -1,5 +1,11 @@
-.input {
+input  {
   padding: 10px;
+  width: 100%;
+  border-radius: 15px;  
+}
+
+#formulario {
+  display: block;
 }
 
 .title {
@@ -8,7 +14,7 @@
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 45px;
   font-family: "Open Sans Condensed", sans-serif;
   padding: 10px;
 }
@@ -19,22 +25,36 @@ h2 {
   justify-content: space-around;
 }
 
-.formulario__input-error {
-  font-size: small;
+.btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
+  
   background-color: #4ab3fa;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   margin: 15px;
   height: 40px;
   border-radius: 10px;
-  width: auto;
+  width: 50%;
 }
 
-label {
+label  {
+  display: flex;
+  justify-content: center;
   font-family: "Open Sans Condensed", sans-serif;
   margin: 10px;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.error {
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 10px;
+  font-size: 17px;
+  color: red;
+  font-weight: 600;
+
 }
