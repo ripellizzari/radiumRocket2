@@ -1,6 +1,6 @@
 var expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ\s0-9]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
@@ -13,18 +13,14 @@ document.getElementById('fname').addEventListener('blur', valNombre)
 document.getElementById('email').addEventListener('blur', valEmail)
 document.getElementById('edad').addEventListener('blur', valEdad)
 document.getElementById('password').addEventListener('blur', valPassword)
+document.getElementById('rpassword').addEventListener('blur', valRpassword)
+document.getElementById('direccion').addEventListener('blur', valDireccion)
+document.getElementById('telefono').addEventListener('blur', valTelefono)
+document.getElementById('ciudad').addEventListener('blur', valCiudad)
+document.getElementById('ciudad').addEventListener('blur', valCiudad)
+document.getElementById('cp').addEventListener('blur', valCp)
+document.getElementById('dni').addEventListener('blur', valDni)
 
-
-var fname = document.getElementById('fname').value
-var password = document.getElementById('password').value;
-var rpassword = document.getElementById('rpassword').value;
-var email = document.getElementById('email').value;
-var edad = document.getElementById('edad').value;
-var telefono = document.getElementById('telefono').value;
-var direccion = document.getElementById('direccion').value;
-var ciudad = document.getElementById('ciudad').value;
-var cp = document.getElementById('cp').value;
-var dni = document.getElementById('dni').value;
 
 function valNombre(){
     var nombre = document.getElementById('fname').value;
@@ -50,7 +46,7 @@ function valEdad(){
     var edad = document.getElementById('edad').value;
     document.getElementById('medad').style.display="none";
     
-    if (edad <17){
+    if (edad <18){
         document.getElementById('medad').style.display="block";
         return false;
     }
@@ -69,6 +65,79 @@ function valPassword(){
     return true;
 }
 
+
+function valRpassword(){
+    var rpassword = document.getElementById('rpassword').value;
+    document.getElementById('mrpassword').style.display="none";
+    var password = document.getElementById('password').value;
+    
+    if (password != rpassword){
+        document.getElementById('mrpassword').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+function valDireccion(){
+    var direccion = document.getElementById('direccion').value;
+    document.getElementById('mdireccion').style.display="none";
+    var re = /^[a-zA-ZÀ-ÿ\s0-9]+$/;
+    if(re.test(direccion)==false || direccion.length<5 || direccion.indexOf(" ")<1){
+        document.getElementById('mdireccion').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+function valTelefono(){
+    var telefono = document.getElementById('telefono').value;
+    document.getElementById('mtelefono').style.display="none";
+    var re = /^\d{7,14}$/
+    if(re.test(telefono)==false){
+        document.getElementById('mtelefono').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+function valCiudad(){
+    var ciudad = document.getElementById('ciudad').value;
+    document.getElementById('mciudad').style.display="none";
+    if(ciudad.length<3){
+        document.getElementById('mciudad').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+function valCp(){
+    var cp = document.getElementById('cp').value;
+    document.getElementById('mcp').style.display="none";
+    if(cp.length <3){
+        document.getElementById('mcp').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+function valDni(){
+    var dni = document.getElementById('dni').value;
+    document.getElementById('mdni').style.display="none";
+    var re = /^\d{7,8}$/
+    if(re.test(dni)==false){
+        document.getElementById('mdni').style.display="block";
+        return false;
+    }
+    return true;
+}
+
+
+
+
+
+
+
+
 function validarFormulario(e){
 
     e.preventDefault();
@@ -86,13 +155,38 @@ function validarFormulario(e){
     if (!valEdad()){
         msg=msg+'Falta la edad\n';
     }
+    if (!valRpassword()){
+        msg=msg+'No coinciden las contraseñas\n';
+    }
+    if (!valDireccion()){
+        msg=msg+'Falta la dirección\n';
+    }
+    if (!valTelefono()){
+        msg=msg+'Falta el teléfono\n';
+    }
+    if (!valCiudad()){
+        msg=msg+'Falta ciudad\n';
+    }
+    if (!valCp()){
+        msg=msg+'Falta código postal\n';
+    }
+    if (!valDni()){
+        msg=msg+'Falta Dni\n';
+    }
+
 
 
     if (msg==""){
         msg='\nNombre: '+document.getElementById('fname').value;
         msg=msg+'\nEmail: '+document.getElementById('email').value;
         msg=msg+'\nPassword: '+document.getElementById('password').value;
-        msg=msg+'\nEdad: '+document.getElementById('edad').value;
+        msg=msg+'\nPassword Repetida: '+document.getElementById('rpassword').value;
+        msg=msg+'\nEdad: '+document.getElementById('edad').value; 
+        msg=msg+'\nDireción: '+document.getElementById('direccion').value;
+        msg=msg+'\nTeléfono: '+document.getElementById('telefono').value;
+        msg=msg+'\nCiudad: '+document.getElementById('ciudad').value;
+        msg=msg+'\nCódigo Postal: '+document.getElementById('cp').value;
+        msg=msg+'\nDNI: '+document.getElementById('dni').value;
         alert(msg);
     } else {
         alert(msg);
