@@ -38,14 +38,14 @@ function responseForm(res) {
 function dataForm(data) {
     saveOnLocalStorage();
     console.log(data);
-    //Show modal;
-    showModal(data);
+    // Show modal;
+    // showModal(data);
 }
 
 function responseError(err) {
     console.log(err)
-    //Show modal error
-    showModalError(err)
+    // Show modal error
+    // showModalError(err)
 }
 
 
