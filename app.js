@@ -13,22 +13,34 @@ document.getElementById('ciudad').addEventListener('blur', valCiudad)
 document.getElementById('cp').addEventListener('blur', valCp)
 document.getElementById('dni').addEventListener('blur', valDni)
 
+var varName = document.getElementById('fname').value;
+var varEmail = document.getElementById('email').value;
+var varAge = document.getElementById('edad').value;
+var varPass = document.getElementById('password').value;
+var varRpass = document.getElementById('rpassword').value;
+var varAdress = document.getElementById('direccion').value;
+var varPhone = document.getElementById('telefono').value;
+var varCity = document.getElementById('ciudad').value;
+var varZipCode = document.getElementById('cp').value;
+var varDocNum = document.getElementById('dni').value;
+
 
 function valNombre() {
-    var nombre = document.getElementById('fname').value;
+    varName = document.getElementById('fname').value;
     document.getElementById('mfname').style.display = "none";
-    if (nombre.length < 6 || nombre.indexOf(" ") < 1) {
+    if (varName.length < 6 || varName.indexOf(" ") < 1) {
         document.getElementById('mfname').style.display = "block";
         return false;
     }
     return true;
+
 }
 
 function valEmail() {
-    var email = document.getElementById('email').value;
+    varEmail = document.getElementById('email').value;
     document.getElementById('memail').style.display = "none";
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(email) == false) {
+    if (re.test(varEmail) == false) {
         document.getElementById('memail').style.display = "block";
         return false;
     }
@@ -36,10 +48,10 @@ function valEmail() {
 }
 
 function valEdad() {
-    var edad = document.getElementById('edad').value;
+    varAge = document.getElementById('edad').value;
     document.getElementById('medad').style.display = "none";
 
-    if (edad < 18) {
+    if (varAge < 18) {
         document.getElementById('medad').style.display = "block";
         return false;
     }
@@ -47,11 +59,11 @@ function valEdad() {
 }
 
 function valPassword() {
-    var password = document.getElementById('password').value;
+    varPass = document.getElementById('password').value;
     document.getElementById('mpassword').style.display = "none";
     var re = /^[a-zA-Z]+[0-9]+$/;
 
-    if (re.test(password) == false || password.length < 8) {
+    if (re.test(varPass) == false || varPass.length < 8) {
         document.getElementById('mpassword').style.display = "block";
         return false;
     }
@@ -59,11 +71,11 @@ function valPassword() {
 }
 
 function valRpassword() {
-    var rpassword = document.getElementById('rpassword').value;
+    varRpass = document.getElementById('rpassword').value;
     document.getElementById('mrpassword').style.display = "none";
-    var password = document.getElementById('password').value;
+    varPass = document.getElementById('password').value;
 
-    if (password != rpassword) {
+    if (varPass != varRpass) {
         document.getElementById('mrpassword').style.display = "block";
         return false;
     }
@@ -71,10 +83,10 @@ function valRpassword() {
 }
 
 function valDireccion() {
-    var direccion = document.getElementById('direccion').value;
+    varAdress = document.getElementById('direccion').value;
     document.getElementById('mdireccion').style.display = "none";
     var re = /^[a-zA-ZÀ-ÿ\s0-9]+$/;
-    if (re.test(direccion) == false || direccion.length < 5 || direccion.indexOf(" ") < 1) {
+    if (re.test(varAdress) == false || varAdress.length < 5 || varAdress.indexOf(" ") < 1) {
         document.getElementById('mdireccion').style.display = "block";
         return false;
     }
@@ -82,10 +94,10 @@ function valDireccion() {
 }
 
 function valTelefono() {
-    var telefono = document.getElementById('telefono').value;
+    varPhone = document.getElementById('telefono').value;
     document.getElementById('mtelefono').style.display = "none";
     var re = /^\d{7,14}$/
-    if (re.test(telefono) == false) {
+    if (re.test(varPhone) == false) {
         document.getElementById('mtelefono').style.display = "block";
         return false;
     }
@@ -93,9 +105,9 @@ function valTelefono() {
 }
 
 function valCiudad() {
-    var ciudad = document.getElementById('ciudad').value;
+    varCity = document.getElementById('ciudad').value;
     document.getElementById('mciudad').style.display = "none";
-    if (ciudad.length < 3) {
+    if (varCity.length < 3) {
         document.getElementById('mciudad').style.display = "block";
         return false;
     }
@@ -103,9 +115,9 @@ function valCiudad() {
 }
 
 function valCp() {
-    var cp = document.getElementById('cp').value;
+    varZipCode = document.getElementById('cp').value;
     document.getElementById('mcp').style.display = "none";
-    if (cp.length < 3) {
+    if (varZipCode.length < 3) {
         document.getElementById('mcp').style.display = "block";
         return false;
     }
@@ -113,10 +125,10 @@ function valCp() {
 }
 
 function valDni() {
-    var dni = document.getElementById('dni').value;
+    varDocNum = document.getElementById('dni').value;
     document.getElementById('mdni').style.display = "none";
     var re = /^\d{7,8}$/
-    if (re.test(dni) == false) {
+    if (re.test(varDocNum) == false) {
         document.getElementById('mdni').style.display = "block";
         return false;
     }
@@ -160,6 +172,7 @@ function validarFormulario(e) {
     }
 
 
+
     if (msg == "") {
         msg = '\nNombre: ' + document.getElementById('fname').value;
         msg = msg + '\nEmail: ' + document.getElementById('email').value;
@@ -171,7 +184,12 @@ function validarFormulario(e) {
         msg = msg + '\nCiudad: ' + document.getElementById('ciudad').value;
         msg = msg + '\nCódigo Postal: ' + document.getElementById('cp').value;
         msg = msg + '\nDNI: ' + document.getElementById('dni').value;
-        alert(msg);
+
+
+
+        sendForm();
+
+
     } else {
         alert(msg);
     }
