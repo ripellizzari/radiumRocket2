@@ -188,9 +188,10 @@ function validarFormulario(e) {
 
 
         sendForm();
-
+        // showModal();
 
     } else {
+        //showModalError();
         alert(msg);
     }
 

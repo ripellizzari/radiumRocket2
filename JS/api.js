@@ -1,9 +1,7 @@
-
-
 function urlDinamic() {
 
     var url = new URL('https://curso-dev-2021.herokuapp.com/newsletter')
-    var params = url.searchParams; // busca parametros
+    var params = url.searchParams;
 
     params.append('name', varName);
     params.append('email', varEmail);
@@ -35,33 +33,20 @@ var sendForm = function () {
 function responseForm(res) {
     console.log(res)
     return res.json();
-
 }
 
 function dataForm(data) {
-    //mostrar modal;
-
     saveOnLocalStorage();
     console.log(data);
+    //Show modal;
     showModal(data);
 }
 
 function responseError(err) {
     console.log(err)
-    // showModalError(err)
+    //Show modal error
+    showModalError(err)
 }
-
-
-function showModal(data) {
-    for (const key of data) {
-        var li = document.createElement('li')
-        li.textContent = `${key} : ${data[key]}`
-        document.getElementById('ul_modal').appendChild(li)
-
-    }
-
-}
-
 
 
 
