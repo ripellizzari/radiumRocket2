@@ -1,0 +1,44 @@
+#vtnModal{
+    display: none;
+    
+}
+
+#vtnModal_Gris{
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    bottom: 0px;
+    background-color: black;
+    opacity: .7;
+}
+
+#vtnModal_Data{
+    position: fixed;
+    left: 80px;
+    right: 80px;
+    top:80px;
+    bottom: 80px;
+    background-color: #ffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: black;
+}
+
+#vtnModal_Cerrar{
+    position: fixed;
+    right: 100px;
+    border-radius: 10px;
+    padding:10px;
+    background-color: #79e495;
+    font-weight: 600;
+    color: #ffff;
+    
+}

@@ -30,6 +30,7 @@ var sendForm = function () {
 }
 
 
+
 function responseForm(res) {
     console.log(res)
     return res.json();
@@ -38,14 +39,12 @@ function responseForm(res) {
 function dataForm(data) {
     saveOnLocalStorage();
     console.log(data);
-    // Show modal;
-    // showModal(data);
+    showModal(data);
 }
 
 function responseError(err) {
     console.log(err)
-    // Show modal error
-    // showModalError(err)
+    showModalError(err)
 }
 
 

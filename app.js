@@ -141,34 +141,34 @@ function validarFormulario(e) {
     var msg = ""
 
     if (!valNombre()) {
-        msg = msg + 'Falta el nombre\n';
+        msg = msg + 'Falta el nombre<br>';
     }
     if (!valEmail()) {
-        msg = msg + 'Falta el email\n';
+        msg = msg + 'Falta el email<br>';
     }
     if (!valPassword()) {
-        msg = msg + 'Falta el password\n';
+        msg = msg + 'Falta el password<br>';
     }
     if (!valEdad()) {
-        msg = msg + 'Falta la edad\n';
+        msg = msg + 'Falta la edad<br>';
     }
     if (!valRpassword()) {
-        msg = msg + 'No coinciden las contraseñas\n';
+        msg = msg + 'No coinciden las contraseñas<br>';
     }
     if (!valDireccion()) {
-        msg = msg + 'Falta la dirección\n';
+        msg = msg + 'Falta la dirección<br>';
     }
     if (!valTelefono()) {
-        msg = msg + 'Falta el teléfono\n';
+        msg = msg + 'Falta el teléfono<br>';
     }
     if (!valCiudad()) {
-        msg = msg + 'Falta ciudad\n';
+        msg = msg + 'Falta ciudad<br>';
     }
     if (!valCp()) {
-        msg = msg + 'Falta código postal\n';
+        msg = msg + 'Falta código postal<br>';
     }
     if (!valDni()) {
-        msg = msg + 'Falta Dni\n';
+        msg = msg + 'Falta Dni<br>';
     }
 
 
@@ -188,11 +188,11 @@ function validarFormulario(e) {
 
 
         sendForm();
-        // showModal();
+
 
     } else {
-        //showModalError();
-        alert(msg);
+        showModalError(msg);
+
     }
 
 }
